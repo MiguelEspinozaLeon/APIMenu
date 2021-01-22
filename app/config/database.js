@@ -8,7 +8,9 @@ module.exports = {
     connect: function(){
         if(this.connection) return this.connection;
         return mongoose.connect(process.env.DB_URL, {
-            useNewUrlParser: true
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
         }).then(
             connection =>{
                 this.connection = connection;
