@@ -7,7 +7,9 @@ module.exports = {
     connection: null,
     connect: function(){
         if(this.connection) return this.connection;
-        return mongoose.connect(process.env.DB_URL).then(
+        return mongoose.connect(process.env.DB_URL, {
+            useNewUrlParser: true
+        }).then(
             connection =>{
                 this.connection = connection;
                 console.log('Conexion a la base de datos exitosa');
