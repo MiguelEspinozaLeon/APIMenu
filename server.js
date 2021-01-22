@@ -1,10 +1,10 @@
 const Database = require('./app/config/database');
 const CONFIG = require('./app/config/config');
 const App = require('./app/app');
-
+require('./app/config/database');
 require('dotenv').config({path: './variables.env'});
 
-Database.connect();
+//Database.connect();
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
