@@ -2,6 +2,7 @@ const Product = require('../models/Product');
 
 function list(req, res){
     Product.find ({})
+    
         .then(products =>{
             if(products.length) return res.status(200).send({products});
             return res.status(204).send({message: 'NO CONTENT'});
