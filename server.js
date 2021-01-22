@@ -11,5 +11,5 @@ const port = process.env.PORT || 3000;
 
 App.listen(port, host, function(error){
     if(error) return console.log(error);
-    console.log(`Servidor corriendo en el puerto ${port} `);
+    console.log(`Servidor corriendo en el puerto ${port} y en el host ${host} `);
 });
